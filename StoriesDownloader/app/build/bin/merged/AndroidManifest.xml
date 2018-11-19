@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ru.vovadev.vkstories"
+    android:versionCode="10"
+    android:versionName="1.9" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="26" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
+    <application
+        android:name="ru.vovadev.vkstories.Application"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:resizeableActivity="true"
+        android:theme="@style/AppTheme" >
+        <provider
+            android:name="ru.vovadev.vkstories.MyFileProvider"
+            android:authorities="ru.vovadev.vkstories.provider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity
+            android:name="ru.vovadev.vkstories.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <data
+                android:host="launch"
+                android:scheme="vksd" />
+        </activity>
+        <activity
+            android:name="ru.vovadev.vkstories.StoryActivity"
+            android:label="@string/story" />
+        <activity
+            android:name="ru.vovadev.vkstories.MusicActivity"
+            android:label="@string/music" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ru.vovadev.MainActivity" />
+        </activity>
+        <activity
+            android:name="ru.vovadev.vkstories.SearchActivity"
+            android:label="@string/findByLink" />
+        <activity
+            android:name="ru.vovadev.vkstories.RepliesActivity"
+            android:label="@string/answer" >
+        </activity>
+        <activity
+            android:name="ru.vovadev.vkstories.PlayerActivity"
+            android:label="@string/music" />
+        <activity
+            android:name="ru.vovadev.vkstories.FriendsActivity"
+            android:label="@string/friends" />
+        <activity
+            android:name="ru.vovadev.vkstories.UserActivity"
+            android:label="" />
+        <activity
+            android:name="ru.vovadev.vkstories.UserStoriesActivity"
+            android:label="@string/stories" />
+        <activity
+            android:name="com.vk.sdk.VKServiceActivity"
+            android:label="ServiceActivity"
+            android:theme="@style/VK.Transparent" />
+
+        <provider
+            android:name="com.squareup.picasso.PicassoProvider"
+            android:authorities="ru.vovadev.vkstories.com.squareup.picasso"
+            android:exported="false" />
+    </application>
+
+</manifest>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">StoriesDownloader</string>
+	<string name="shared_prefs">main</string>
+	<integer name="com_vk_sdk_AppId">6665901</integer>
+	<string name="com_vk_sdk_ApiVersion">5.80</string>
+	<string name="appdir">/sdcard/StoriesDownloader</string>
+	<string name="appdirns">sdcard/StoriesDownloader</string>
+	
+	<string name="story">История</string>
+	<string name="back">Назад</string>
+	<string name="download">Скачать</string>
+	<string name="watch_video">Открыть в...</string>
+	<string name="hint">Выберите пользователя, чью историю нужно посмотреть</string>
+	<string name="findByLink">Поиск по ссылке</string>
+	<string name="donate">Задонатить</string>
+	<string name="vkGroup">Группа ВК</string>
+	<string name="login">Войти</string>
+	<string name="api_err">Ошибка VK API</string>
+	<string name="typeOf">Тип контента</string>
+	<string name="photo">фотография</string>
+	<string name="video">видео</string>
+	<string name="load_err">Произошла ошибка загрузки. Пожалуйста, попробуйте ещё раз</string>
+	<string name="search">Поиск</string>
+	<string name="answer">Ответы</string>
+	<string name="parent">Род. история</string>
+	<string name="github">GutHub</string>
+	<string name="logout">Выйти</string>
+	<string name="about">О приложении</string>
+	<string name="ok">OK</string>
+	<string name="copy_link">Скопировать ссылку</string>
+	<string name="share">Поделиться</string>
+	<string name="copied">Скопировано</string>
+	<string name="changeAccount">Сменить аккаунт</string>
+	<string name="music">Музыка</string>
+	<string name="oflogin">Логин</string>
+	<string name="password">Пароль</string>
+	<string name="empty">Пусто</string>
+	<string name="aboutKate">С декабря 2016 года ВК больше не дает доступ к музыке всем желающим, только официальным приложениям. Для того, чтобы получить Ваши аудиозаписи, потребуется авторизироваться как через официальное приложение для Android. Ваш логин и пароль никуда, кроме ВКонтакте, переданы не будут.</string>
+	<string name="pda">4PDA</string>
+	<string name="thankstext">Спасибо за обновление!</string>
+	<string name="friends">Друзья</string>
+	<string name="user">Пользователь</string>
+	<string name="profile_locked">Доступ закрыт</string>
+	<string name="stories">Истории</string>
+	<string name="noStoriesText">Нет историй</string>
+	<string name="menu">Меню</string>
+
+</resources>

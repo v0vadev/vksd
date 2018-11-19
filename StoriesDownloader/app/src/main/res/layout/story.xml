@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_height="match_parent"
+	android:layout_width="match_parent"
+	android:orientation="vertical"
+	android:gravity="center">
+
+	<LinearLayout
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:orientation="horizontal"
+		android:gravity="center_vertical|center_horizontal"
+		android:layout_marginBottom="10dp"
+		android:onClick="openProfile">
+
+		<de.hdodenhof.circleimageview.CircleImageView
+			android:layout_height="50dp"
+			android:layout_width="50dp"
+			android:src="@drawable/placeholder"
+			android:id="@+id/authorpic"/>
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:layout_marginLeft="10dp"
+			android:id="@+id/authorname"/>
+
+	</LinearLayout>
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:textAppearance="?android:attr/textAppearanceSmall"
+		android:id="@+id/storyDate"
+		android:layout_marginBottom="10dp"/>
+
+	<ImageView
+		android:layout_height="700px"
+		android:layout_width="wrap_content"
+		android:src="@drawable/screen"
+		android:id="@+id/story"
+		android:visibility="gone"/>
+
+	<WebView
+		android:id="@+id/webView"
+		android:layout_width="wrap_content"
+		android:layout_height="700px"
+		android:visibility="gone"/>
+
+	<TextView
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:id="@+id/storyType"/>
+
+	<LinearLayout
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:orientation="horizontal"
+		android:gravity="center">
+
+		<Button
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:text="@string/download"
+			android:id="@+id/downloadBtn"
+			android:onClick="download"/>
+
+		<Button
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:text="@string/watch_video"
+			android:visibility="gone"
+			android:id="@+id/wvBtn"
+			android:onClick="openVideo"/>
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:orientation="vertical"
+		android:gravity="center_horizontal">
+
+		<LinearLayout
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:orientation="horizontal"
+			android:gravity="center_horizontal">
+
+			<Button
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:text="@string/answer"
+				android:visibility="gone"
+				android:id="@+id/answersBtn"/>
+
+			<Button
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:text="@string/parent"
+				android:visibility="gone"
+				android:id="@+id/parentBtn"/>
+
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:orientation="vertical">
+
+			<Button
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:text="Button"
+				android:id="@+id/linkBtn"
+				android:visibility="gone"/>
+
+		</LinearLayout>
+
+	</LinearLayout>
+
+</LinearLayout>
+

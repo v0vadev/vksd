@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ru.vovadev.vkstories" >
+
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+		android:name="Application"
+        android:theme="@style/AppTheme"
+		android:resizeableActivity = "true">
+		<provider
+            android:name=".MyFileProvider"
+            android:authorities="ru.vovadev.vkstories.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"/>
+        </provider>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+				<category android:name="android.intent.category.BROWSABLE"/>
+				<category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+			<data android:scheme="vksd" android:host="launch" />
+        </activity>
+		<activity
+			android:name=".StoryActivity"
+			android:label="@string/story"/>
+		<activity
+			android:name=".MusicActivity"
+			android:label="@string/music">
+			<meta-data
+				android:name="android.support.PARENT_ACTIVITY"
+				android:value="ru.vovadev.MainActivity" />
+		</activity>
+		<activity
+			android:name=".SearchActivity"
+			android:label="@string/findByLink"/>
+		<activity
+            android:name=".RepliesActivity"
+            android:label="@string/answer" >
+        </activity>
+		<activity
+			android:name=".PlayerActivity"
+			android:label="@string/music"/>
+		<activity
+			android:name=".FriendsActivity"
+			android:label="@string/friends"/>
+		<activity
+			android:name=".UserActivity"
+			android:label=""/>
+		<activity
+			android:name=".UserStoriesActivity"
+			android:label="@string/stories"/>
+		<activity android:name="com.vk.sdk.VKServiceActivity" android:label="ServiceActivity" android:theme="@style/VK.Transparent" />
+    </application>
+
+</manifest>

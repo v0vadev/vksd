@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical"
+	android:gravity="center">
+
+	<de.hdodenhof.circleimageview.CircleImageView
+		android:layout_height="100dp"
+		android:layout_width="100dp"
+		android:src="@drawable/placeholder"
+		android:layout_marginTop="10dp"
+		android:id="@+id/useravaCiv"
+		android:visibility="gone"/>
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:text="Name Surname"
+		android:layout_marginTop="10dp"
+		android:id="@+id/usernameTv"
+		android:visibility="gone"/>
+
+	<LinearLayout
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:orientation="horizontal"
+		android:layout_marginTop="10dp"
+		android:gravity="center_horizontal"
+		android:id="@+id/btnsLay"
+		android:visibility="gone">
+
+		<Button
+			style="?android:attr/buttonBarButtonStyle"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:text="@string/friends"
+			android:layout_weight="1.0"
+			android:id="@+id/fbtn"
+			android:onClick="openFriends"/>
+
+		<Button
+			style="?android:attr/buttonBarButtonStyle"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:text="@string/stories"
+			android:layout_weight="1.0"
+			android:id="@+id/sbtn"
+			android:onClick="openStories"/>
+
+		<Button
+			style="?android:attr/buttonBarButtonStyle"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:text="@string/music"
+			android:layout_weight="1.0"
+			android:id="@+id/mbtn"
+			android:onClick="openMusic"/>
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:orientation="horizontal"
+		android:gravity="center"
+		android:id="@+id/lockedLay"
+		android:visibility="gone">
+
+		<ImageView
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:src="@drawable/lock_icon"/>
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:text="@string/profile_locked"
+			android:layout_marginLeft="10dp"/>
+
+	</LinearLayout>
+
+	<ProgressBar
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:id="@+id/userLoader"/>
+
+</LinearLayout>
+
